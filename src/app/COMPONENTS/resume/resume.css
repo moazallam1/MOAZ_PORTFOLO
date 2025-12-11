@@ -1,0 +1,96 @@
+#resume {
+  background: linear-gradient(135deg, rgba(56, 178, 139, 0.05) 0%, rgba(200, 244, 67, 0.02) 100%);
+}
+
+.resume-nav-btn {
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  border: 2px solid #4a4a4a;
+  background: transparent;
+  color: #fff;
+}
+
+.resume-nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(56, 178, 139, 0.2);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.resume-nav-btn:hover::before {
+  left: 100%;
+}
+
+.resume-nav-btn:hover {
+  border-color: #38B28B;
+  color: #38B28B;
+}
+
+.resume-nav-btn.active {
+  background: #38B28B !important;
+  color: #000 !important;
+  border-color: #38B28B !important;
+  box-shadow: 0 0 20px rgba(56, 178, 139, 0.4);
+}
+
+.resume-content-container {
+  scrollbar-width: thin;
+  scrollbar-color: #38B28B #1a1a1a;
+}
+
+.resume-content-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.resume-content-container::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+.resume-content-container::-webkit-scrollbar-thumb {
+  background: #38B28B;
+  border-radius: 10px;
+}
+
+.resume-content-container::-webkit-scrollbar-thumb:hover {
+  background: #2a9970;
+}
+
+.resume-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.resume-content.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#resume .border-l-2 {
+  transition: all 0.3s ease;
+  padding-bottom: 1rem;
+}
+
+#resume .border-l-2:hover {
+  padding-left: 1.75rem;
+  border-color: #38B28B;
+}
+
+#resume .border-l-2:hover h4 {
+  color: #38B28B;
+}

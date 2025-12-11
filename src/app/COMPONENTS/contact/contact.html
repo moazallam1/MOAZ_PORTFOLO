@@ -1,0 +1,164 @@
+<section class="contact-wrapper ">
+  <div class="contact-container">
+    <div class="form-section">
+      <div class="section-header">
+        <h2>Let's work together</h2>
+        <div class="header-line"></div>
+      </div>
+      <p class="section-description">
+        Have a project in mind? I'd love to hear about it. Whether you need a website, mobile app, or consulting services, let's connect and bring your ideas to life.
+      </p>
+
+      <form [formGroup]="contactForm" (ngSubmit)="sendMessage()" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              placeholder="hamza"
+              formControlName="firstName"
+              [class.error]="isFieldInvalid('firstName')"
+            />
+            <span class="error-message" *ngIf="isFieldInvalid('firstName')">
+              First name is required
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Allam"
+              formControlName="lastName"
+              [class.error]="isFieldInvalid('lastName')"
+            />
+            <span class="error-message" *ngIf="isFieldInvalid('lastName')">
+              Last name is required
+            </span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="hamza@example.com"
+              formControlName="email"
+              [class.error]="isFieldInvalid('email')"
+            />
+            <span class="error-message" *ngIf="isFieldInvalid('email')">
+              {{ getEmailError() }}
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="+20 1044377059"
+              formControlName="phone"
+              [class.error]="isFieldInvalid('phone')"
+            />
+            <span class="error-message" *ngIf="isFieldInvalid('phone')">
+              Phone number is required
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="service">Select a Service</label>
+          <select id="service" formControlName="service" [class.error]="isFieldInvalid('service')">
+            <option value="" disabled>Choose a service...</option>
+            <option value="web-design">Web Design</option>
+            <option value="development">Web Development</option>
+            <option value="mobile">Mobile App Development</option>
+            <option value="consulting">Consulting</option>
+            <option value="other">Other</option>
+          </select>
+          <span class="error-message" *ngIf="isFieldInvalid('service')">
+            Please select a service
+          </span>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            placeholder="Tell us about your project..."
+            formControlName="message"
+            [class.error]="isFieldInvalid('message')"
+            maxlength="500"
+          ></textarea>
+          <span class="char-count">{{ contactForm.get('message')?.value?.length || 0 }}/500</span>
+          <span class="error-message" *ngIf="isFieldInvalid('message')">
+            Message is required (min 10 characters)
+          </span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="send-btn" [disabled]="!contactForm.valid || isSubmitting">
+            <span *ngIf="!isSubmitting">Send message</span>
+            <span *ngIf="isSubmitting" class="loader"></span>
+          </button>
+          <div class="success-message" *ngIf="submitSuccess">✓ Message sent successfully!</div>
+          <div class="error-message" *ngIf="submitError">✗ Failed to send message. Please try again.</div>
+        </div>
+      </form>
+    </div>
+
+    <div class="info-section">
+      <h3>Get In Touch</h3>
+
+      <div class="info-item">
+        <div class="icon-wrapper phone-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            ></path>
+          </svg>
+        </div>
+        <div class="info-content">
+          <p class="label">Phone</p>
+          <p class="value"><a href="tel:+40321654876">+20 1044377059 </a></p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="icon-wrapper email-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+        </div>
+        <div class="info-content">
+          <p class="label">Email</p>
+          <p class="value"><a href="mailto:youremail@email.com">moazallam133@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="icon-wrapper address-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <div class="info-content">
+          <p class="label">Address</p>
+          <p class="value"><a >Alexandria , Egypt</a></p>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <p class="label">Follow Us</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/moazallam/" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/moazallam1" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

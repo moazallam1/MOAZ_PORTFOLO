@@ -1,0 +1,82 @@
+<section id="work" class="text-white min-h-screen py-28">
+  <div class="container w-[80%] mx-auto">
+    <!-- Carousel Container -->
+    <div class="relative w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <!-- Project Info -->
+        <div class="project-info order-2 lg:order-1">
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-sm font-bold text-[#38B28B] mb-2">Featured Project</h3>
+              <h2 class="text-3xl font-bold mb-4 project-title">{{ currentProject.title }}</h2>
+              <p class="text-gray-400 leading-relaxed mb-6 project-description">
+                {{ currentProject.description }}
+              </p>
+              
+              <div class="mb-6">
+                <p class="text-sm font-semibold mb-3 text-gray-300">Technologies Used:</p>
+                <div class="flex flex-wrap gap-2 project-tech">
+                  <span 
+                    *ngFor="let tech of currentProject.technologies"
+                    class="px-3 py-1 rounded-full bg-[#38B28B]/20 text-[#38B28B] text-xs font-semibold">
+                    {{ tech }}
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <button 
+                  type="button" 
+                  (click)="openProjectLink('live')"
+                  class="project-live px-6 py-2 bg-[#38B28B] text-black font-semibold rounded-lg hover:bg-[#2a9970] transition-colors duration-300 cursor-pointer">
+                  View Project
+                </button>
+                <button 
+                  type="button" 
+                  (click)="openProjectLink('github')"
+                  class="project-github px-6 py-2 border border-[#38B28B] text-[#38B28B] font-semibold rounded-lg hover:bg-[#38B28B] hover:text-black transition-all duration-300 cursor-pointer">
+                  GitHub
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Images with Carousel -->
+        <div class="project-images order-1 lg:order-2 relative">
+          <div class="relative">
+            <div class="bg-gradient-to-b from-[#38B28B] to-transparent p-4 rounded-lg overflow-hidden">
+              <img 
+                [src]="currentProject.mainImage" 
+                [alt]="currentProject.title"
+                class="project-main-image w-full rounded-lg object-cover object-center h-80">
+            </div>
+
+            <!-- Arrow Buttons Below Image -->
+            <div class="flex justify-center gap-6 mt-8">
+              <button
+                type="button"
+                (click)="previousProject()"
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-[#38B28B] to-[#2a9970] border-2 border-[#38B28B] text-white hover:shadow-lg hover:shadow-[#38B28B]/50 hover:scale-110 transition-all duration-300 cursor-pointer"
+                aria-label="Previous project">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                (click)="nextProject()"
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-[#38B28B] to-[#2a9970] border-2 border-[#38B28B] text-white hover:shadow-lg hover:shadow-[#38B28B]/50 hover:scale-110 transition-all duration-300 cursor-pointer"
+                aria-label="Next project">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin-frame {
+    animation: spin 20s linear infinite;
+}
+
+#home {
+    min-height: auto;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home ul li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#home ul li p {
+    margin: 0;
+}
+
+#home ul li span {
+    display: block;
+}

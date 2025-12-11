@@ -1,0 +1,11 @@
+#details {
+  background: linear-gradient(135deg, rgba(56, 178, 139, 0.05) 0%, rgba(200, 244, 67, 0.02) 100%);
+}
+
+#details .border-gray-700:hover {
+  transform: translateY(-5px);
+}
+
+#details .group:hover {
+  background: rgba(56, 178, 139, 0.1);
+}
