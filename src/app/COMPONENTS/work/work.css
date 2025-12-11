@@ -193,6 +193,41 @@
   border-radius: 12px;
 }
 
+/* Ensure arrow buttons are visible and functional on all screen sizes */
+button[aria-label="Previous project"],
+button[aria-label="Next project"] {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* Small screens (sm: 640px) */
+@media (max-width: 768px) {
+  button[aria-label="Previous project"],
+  button[aria-label="Next project"] {
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  button[aria-label="Previous project"] svg,
+  button[aria-label="Next project"] svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Extra small screens (xs) */
+@media (max-width: 640px) {
+  button[aria-label="Previous project"],
+  button[aria-label="Next project"] {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .work-container {
     flex-direction: column;
