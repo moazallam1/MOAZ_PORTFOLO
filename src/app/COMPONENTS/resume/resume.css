@@ -2,13 +2,15 @@
   background: linear-gradient(135deg, rgba(56, 178, 139, 0.05) 0%, rgba(200, 244, 67, 0.02) 100%);
 }
 
+/* Resume Navigation Buttons */
 .resume-nav-btn {
   position: relative;
   overflow: hidden;
   font-size: 14px;
-  border: 2px solid #4a4a4a;
+  border: 2px solid transparent;
   background: transparent;
   color: #fff;
+  transition: all 0.3s ease;
 }
 
 .resume-nav-btn::before {
@@ -28,8 +30,8 @@
 }
 
 .resume-nav-btn:hover {
+  background: rgba(56, 178, 139, 0.1);
   border-color: #38B28B;
-  color: #38B28B;
 }
 
 .resume-nav-btn.active {
@@ -39,17 +41,18 @@
   box-shadow: 0 0 20px rgba(56, 178, 139, 0.4);
 }
 
+/* Resume Content */
 .resume-content-container {
   scrollbar-width: thin;
-  scrollbar-color: #38B28B #1a1a1a;
+  scrollbar-color: #38B28B rgba(56, 178, 139, 0.1);
 }
 
 .resume-content-container::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 .resume-content-container::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: rgba(56, 178, 139, 0.1);
   border-radius: 10px;
 }
 
@@ -63,7 +66,7 @@
 }
 
 .resume-content {
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.3s ease;
 }
 
 .resume-content.hidden {
@@ -78,6 +81,23 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+  transition: width 0.05s linear;
+  background: linear-gradient(90deg, #38B28B 0%, #2a9970 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-nav-btn {
+    font-size: 14px;
+  }
+
+  #resume {
+    padding: 40px 0;
   }
 }
 

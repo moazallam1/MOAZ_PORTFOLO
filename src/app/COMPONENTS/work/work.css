@@ -121,12 +121,14 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  margin-top: 2rem;
 }
 
 #work .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .project-info {
@@ -193,23 +195,107 @@
   border-radius: 12px;
 }
 
-/* Ensure arrow buttons are visible and functional on all screen sizes */
+/* Carousel buttons - visible and functional on all screen sizes */
 button[aria-label="Previous project"],
 button[aria-label="Next project"] {
-  min-width: 48px;
-  min-height: 48px;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Mobile First - Extra small screens (xs, default) */
+@media (max-width: 640px) {
+  #work {
+    min-height: auto;
+    padding: 40px 0 20px 0;
+    margin-top: 2rem;
+  }
+
+  #work .container {
+    width: 90%;
+  }
+
+  .project-info {
+    margin-top: 20px;
+  }
+
+  #work h2 {
+    font-size: 1.5rem;
+  }
+
+  #work p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  button[aria-label="Previous project"],
+  button[aria-label="Next project"] {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  button[aria-label="Previous project"] svg,
+  button[aria-label="Next project"] svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .project-tech span {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .project-live,
+  .project-github {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .project-images {
+    margin-top: 10px;
+  }
 }
 
 /* Small screens (sm: 640px) */
-@media (max-width: 768px) {
+@media (min-width: 641px) and (max-width: 768px) {
+  #work {
+    min-height: auto;
+    padding: 50px 0 30px 0;
+    margin-top: 2.5rem;
+  }
+
+  #work .container {
+    width: 85%;
+  }
+
+  #work h2 {
+    font-size: 2rem;
+  }
+
+  button[aria-label="Previous project"],
+  button[aria-label="Next project"] {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  button[aria-label="Previous project"] svg,
+  button[aria-label="Next project"] svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Tablet and up (md: 768px) */
+@media (min-width: 769px) {
   button[aria-label="Previous project"],
   button[aria-label="Next project"] {
     width: 48px !important;
     height: 48px !important;
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
   }
 
   button[aria-label="Previous project"] svg,
@@ -219,47 +305,23 @@ button[aria-label="Next project"] {
   }
 }
 
-/* Extra small screens (xs) */
-@media (max-width: 640px) {
-  button[aria-label="Previous project"],
-  button[aria-label="Next project"] {
-    width: 44px !important;
-    height: 44px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .work-container {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .project-title {
-    font-size: 36px;
-  }
-
-  .project-number {
-    font-size: 60px;
-  }
-
+/* Large screens (lg: 1024px) */
+@media (min-width: 1024px) {
   #work {
-    min-height: auto;
-    padding: 40px 20px;
+    min-height: 100vh;
+    padding: 0;
+    margin-top: 3rem;
+  }
+
+  #work .container {
+    width: 80%;
   }
 
   #work h2 {
-    font-size: 1.875rem;
+    font-size: 2.5rem;
   }
 
-  #work .project-info {
-    order: 1 !important;
-  }
-
-  #work .project-images {
-    order: 2 !important;
-  }
-
-  #work .flex.justify-end {
-    justify-content: center;
+  #work .project-images:hover img {
+    transform: scale(1.02);
   }
 }
