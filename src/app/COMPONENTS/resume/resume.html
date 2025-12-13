@@ -1,8 +1,8 @@
-<section id="resume" class="text-white py-28">
+<section id="resume" class="text-white py-32">
   <div class="container w-[80%] mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       <!-- Left Sidebar -->
-      <div class="md:col-span-1">
+      <div class="md:col-span-1 mt-12 md:mt-0">
         <h2 class="text-3xl font-bold mb-8">Why hire me?</h2>
         <p class="text-gray-400 text-sm leading-relaxed mb-8">
           I'm a passionate Frontend Developer with a unique combination of strong technical expertise and creative problem-solving. 
@@ -10,20 +10,48 @@
         </p>
 
         <!-- Navigation Buttons -->
-        <div class="space-y-4">
-          <button class="resume-nav-btn active w-full px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105" data-tab="experience">
-            Experience
-          </button>
-          <button class="resume-nav-btn w-full px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105" data-tab="education">
-            Education
-          </button>
-          <button class="resume-nav-btn w-full px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105" data-tab="skills">
-            Skills
-          </button>
-          <button class="resume-nav-btn w-full px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105" data-tab="about">
-            About me
-          </button>
-        </div>
+<div class="flex flex-row sm:flex-col gap-2 mt-6">
+  <button
+    class="resume-nav-btn active flex-1 px-2 sm:px-6 py-2 sm:py-3
+           text-[11px] sm:text-base font-bold text-center
+           rounded-lg transition-all duration-300 hover:scale-105
+           whitespace-nowrap"
+    data-tab="experience"
+  >
+    Experience
+  </button>
+
+  <button
+    class="resume-nav-btn flex-1 px-2 sm:px-6 py-2 sm:py-3
+           text-[11px] sm:text-base font-bold text-center
+           rounded-lg transition-all duration-300 hover:scale-105
+           whitespace-nowrap"
+    data-tab="education"
+  >
+    Education
+  </button>
+
+  <button
+    class="resume-nav-btn flex-1 px-2 sm:px-6 py-2 sm:py-3
+           text-[11px] sm:text-base font-bold text-center
+           rounded-lg transition-all duration-300 hover:scale-105
+           whitespace-nowrap"
+    data-tab="skills"
+  >
+    Skills
+  </button>
+
+  <button
+    class="resume-nav-btn flex-1 px-2 sm:px-6 py-2 sm:py-3
+           text-[11px] sm:text-base font-bold text-center
+           rounded-lg transition-all duration-300 hover:scale-105
+           whitespace-nowrap"
+    data-tab="about"
+  >
+    About me
+  </button>
+</div>
+
       </div>
 
       <!-- Right Content - Scrollable Container -->

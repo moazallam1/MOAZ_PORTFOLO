@@ -1,118 +1,117 @@
-<section id="home" class="text-white flex items-center justify-center overflow-visible">
+<section id="home" class="text-white flex items-start justify-center min-h-screen overflow-visible pt-20 sm:pt-32">
   <div class="container w-[80%] mx-auto">
-    <div class="grid lg:grid-cols-2 gap-y-[70px] items-center">
+    <div class="grid lg:grid-cols-2 gap-y-[50px] items-center">
+
       <!-- Info Section -->
-      <div class="info order-2 lg:order-1 space-y-4 md:text-start">
+      <div class="info order-2 lg:order-1 space-y-4 md:text-start mt-10 sm:mt-16">
         <p class="text-[15px] font-bold">Angular Frontend Developer</p>
         <h1 class="text-4xl font-bold">Hello, I'm</h1>
         <h1 class="text-4xl font-bold text-[#38B28B]">MOAZ ALLAM</h1>
-        <p class="leading-10">
+        <p class="leading-8 md:leading-10">
           I'm a passionate Frontend Developer specializing in Angular and modern web technologies.
           I craft beautiful, responsive, and high-performance web applications that deliver exceptional user experiences.
           With expertise in HTML5, CSS3, TypeScript, and Angular, I build scalable solutions for startups and growing businesses.
         </p>
 
-        <div
-          class="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-4 md:space-y-0 text-xl"
-        >
-        <a
-  href="/Moaz_CV.pdf"
-  download
-  class="relative inline-flex items-center justify-center px-6 py-3 rounded-2xl font-semibold text-[#38B28B] border border-[#38B28B] overflow-hidden transition-all duration-300 group hover:text-black"
->
-  <!-- Background effect -->
-  <span
-    class="absolute inset-0 bg-gradient-to-r from-[#38B28B] to-[#c8f443] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
-  ></span>
+        <div class="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-4 md:space-y-0 text-xl">
 
-  <!-- Text and icon -->
-  <span class="relative flex items-center justify-center space-x-2">
-    <span class="group-hover:translate-x-1 transition-transform duration-300">Download CV</span>
-    <i class="fa-solid fa-download group-hover:animate-bounce"></i>
-  </span>
-
-  <!-- Shadow on hover -->
-  <span
-    class="absolute inset-0 rounded-2xl shadow-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"
-  ></span>
-</a>
-
+          <!-- Download CV -->
+          <a
+            href="/Moaz_CV.pdf"
+            download
+            class="relative inline-flex items-center justify-center px-6 py-3 rounded-2xl font-semibold text-[#38B28B] border border-[#38B28B] overflow-hidden transition-all duration-300 group hover:text-black"
+          >
+            <span class="absolute inset-0 bg-gradient-to-r from-[#38B28B] to-[#c8f443] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></span>
+            <span class="relative flex items-center justify-center space-x-2">
+              <span class="group-hover:translate-x-1 transition-transform duration-300">Download CV</span>
+              <i class="fa-solid fa-download group-hover:animate-bounce"></i>
+            </span>
+            <span class="absolute inset-0 rounded-2xl shadow-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></span>
+          </a>
 
           <!-- Social Icons -->
-          <ul class="flex space-x-6 justify-center md:justify-start">
-            <a
-              (click)="openLink('github')"
-              class="px-2 py-2 cursor-pointer hover:text-black transition hover:scale-110"
-              title="GitHub"
-            >
+          <ul class="flex items-center justify-center md:justify-start gap-4 sm:gap-6 mt-4 md:mt-0">
+            <a (click)="openLink('github')" class="p-3 cursor-pointer text-xl transition hover:scale-110 hover:text-black" title="GitHub">
               <i class="fa-brands fa-github"></i>
             </a>
-
-            <a
-              (click)="openLink('linkedin')"
-              class="px-2 py-2 cursor-pointer hover:text-[#0A66C2] transition hover:scale-110"
-              title="LinkedIn"
-            >
+            <a (click)="openLink('linkedin')" class="p-3 cursor-pointer text-xl transition hover:scale-110 hover:text-[#0A66C2]" title="LinkedIn">
               <i class="fa-brands fa-linkedin"></i>
             </a>
-
-            <a
-              (click)="openLink('upwork')"
-              class="px-2 py-2 cursor-pointer hover:text-[#6fda44] transition hover:scale-110"
-              title="Upwork"
-            >
+            <a (click)="openLink('upwork')" class="p-3 cursor-pointer text-xl transition hover:scale-110 hover:text-[#6fda44]" title="Upwork">
               <i class="fa-brands fa-upwork"></i>
             </a>
-
-            <a
-              (click)="openLink('mostaqle')"
-              class="px-2 py-2 cursor-pointer text-gray-400 transition hover:text-[#38B28B] hover:scale-110"
-              title="Mostaql"
-            >
+            <a (click)="openLink('mostaqle')" class="p-3 cursor-pointer text-xl text-gray-400 transition hover:scale-110 hover:text-[#38B28B]" title="Mostaql">
               <i class="fa-regular fa-circle"></i>
             </a>
           </ul>
         </div>
       </div>
+
       <!-- Image Section -->
-      <div class="relative order-1 lg:order-2 mt-32 flex justify-center">
-        <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-        >
-          <div
-            class="w-[330px] h-[330px] rounded-full border-[6px] border-[#38B28B] border-dashed spin-frame"
-          ></div>
+      <div class="relative order-1 lg:order-2 flex justify-center mt-10 sm:mt-0">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          <div class="w-[330px] h-[330px] rounded-full border-[6px] border-[#38B28B] border-dashed spin-frame"></div>
         </div>
-
-        <img
-          src="/IMAGES/HERO_IMG.png"
-          alt="MOAZ ALLAM - Angular Frontend Developer Portrait"
-          class="w-[260px] h-[260px] object-cover rounded-full relative z-10"
-        />
+        <img src="/IMAGES/HERO_IMG.png" alt="MOAZ ALLAM Portrait" class="w-[260px] h-[260px] object-cover rounded-full relative z-10"/>
       </div>
+
     </div>
-    <div class="w-full mt-28">
-      <ul class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-        <li class="space-y-1">
-          <p class="text-4xl font-extrabold text-[#38B28B]">{{ yearsExp }}+</p>
-          <span class="text-sm text-gray-300">Years of Experience</span>
-        </li>
 
-        <li class="space-y-1">
-          <p class="text-4xl font-extrabold text-[#38B28B]">{{ projectsCompleted }}+</p>
-          <span class="text-sm text-gray-300">Projects Completed</span>
-        </li>
+  <!-- Stats Cards -->
+<div class="w-full mt-16 sm:mt-24">
+  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <li class="space-y-1">
-          <p class="text-4xl font-extrabold text-[#38B28B]">{{ technologiesMastered }}+</p>
-          <span class="text-sm text-gray-300">Technologies Mastered</span>
-        </li>
+    <li class="relative group bg-white/5 backdrop-blur rounded-2xl p-6 text-center
+               transition-all duration-500 ease-in-out
+               hover:-translate-y-2 hover:scale-105 hover:bg-white/10 hover:shadow-lg overflow-visible">
+      <p class="text-5xl font-extrabold text-[#38B28B] mb-2 transition-colors duration-300 group-hover:text-[#34A97F]">
+        {{ yearsExp }}+
+      </p>
+      <span class="text-sm text-gray-300 tracking-wide transition-colors duration-300 group-hover:text-[#34A97F]">
+        Years of Experience
+      </span>
+      <div class="h-[2px] w-10 bg-[#38B28B] mx-auto mt-4 rounded-full transition-colors duration-300 group-hover:bg-[#34A97F]"></div>
+    </li>
 
-        <li class="space-y-1">
-          <p class="text-4xl font-extrabold text-[#38B28B]">{{ codeCommits }}+</p>
-          <span class="text-sm text-gray-300">Code Commits</span>
-        </li>
-      </ul>
-    </div>
+    <li class="relative group bg-white/5 backdrop-blur rounded-2xl p-6 text-center
+               transition-all duration-500 ease-in-out
+               hover:-translate-y-2 hover:scale-105 hover:bg-white/10 hover:shadow-lg overflow-visible">
+      <p class="text-5xl font-extrabold text-[#38B28B] mb-2 transition-colors duration-300 group-hover:text-[#34A97F]">
+        {{ projectsCompleted }}+
+      </p>
+      <span class="text-sm text-gray-300 tracking-wide transition-colors duration-300 group-hover:text-[#34A97F]">
+        Projects Completed
+      </span>
+      <div class="h-[2px] w-10 bg-[#38B28B] mx-auto mt-4 rounded-full transition-colors duration-300 group-hover:bg-[#34A97F]"></div>
+    </li>
+
+    <li class="relative group bg-white/5 backdrop-blur rounded-2xl p-6 text-center
+               transition-all duration-500 ease-in-out
+               hover:-translate-y-2 hover:scale-105 hover:bg-white/10 hover:shadow-lg overflow-visible">
+      <p class="text-5xl font-extrabold text-[#38B28B] mb-2 transition-colors duration-300 group-hover:text-[#34A97F]">
+        {{ technologiesMastered }}+
+      </p>
+      <span class="text-sm text-gray-300 tracking-wide transition-colors duration-300 group-hover:text-[#34A97F]">
+        Technologies Mastered
+      </span>
+      <div class="h-[2px] w-10 bg-[#38B28B] mx-auto mt-4 rounded-full transition-colors duration-300 group-hover:bg-[#34A97F]"></div>
+    </li>
+
+    <li class="relative group bg-white/5 backdrop-blur rounded-2xl p-6 text-center
+               transition-all duration-500 ease-in-out
+               hover:-translate-y-2 hover:scale-105 hover:bg-white/10 hover:shadow-lg overflow-visible">
+      <p class="text-5xl font-extrabold text-[#38B28B] mb-2 transition-colors duration-300 group-hover:text-[#34A97F]">
+        {{ codeCommits }}+
+      </p>
+      <span class="text-sm text-gray-300 tracking-wide transition-colors duration-300 group-hover:text-[#34A97F]">
+        Code Commits
+      </span>
+      <div class="h-[2px] w-10 bg-[#38B28B] mx-auto mt-4 rounded-full transition-colors duration-300 group-hover:bg-[#34A97F]"></div>
+    </li>
+
+  </ul>
+</div>
+
+
   </div>
 </section>
