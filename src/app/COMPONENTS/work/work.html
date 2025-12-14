@@ -4,43 +4,43 @@
     <div class="relative w-full">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
         <!-- Project Info -->
-        <div class="project-info order-2 lg:order-1">
-          <div class="space-y-4 md:space-y-6">
-            <div>
-              <h3 class="text-xs md:text-sm font-bold text-[#38B28B] mb-2">Featured Project</h3>
-              <h2 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4 project-title">{{ currentProject.title }}</h2>
-              <p class="text-sm md:text-base text-gray-400 leading-relaxed mb-4 md:mb-6 project-description">
-                {{ currentProject.description }}
-              </p>
-              
-              <div class="mb-4 md:mb-6">
-                <p class="text-xs md:text-sm font-semibold mb-2 md:mb-3 text-gray-300">Technologies Used:</p>
-                <div class="flex flex-wrap gap-2 project-tech">
-                  <span 
-                    *ngFor="let tech of currentProject.technologies"
-                    class="px-2 md:px-3 py-1 rounded-full bg-[#38B28B]/20 text-[#38B28B] text-xs font-semibold">
-                    {{ tech }}
-                  </span>
-                </div>
-              </div>
-
-              <div class="flex gap-3 md:gap-4">
-                <button 
-                  type="button" 
-                  (click)="openProjectLink('live')"
-                  class="project-live px-4 md:px-6 py-2 bg-[#38B28B] text-black font-semibold rounded-lg hover:bg-[#2a9970] transition-colors duration-300 cursor-pointer text-sm md:text-base">
-                  View Project
-                </button>
-                <button 
-                  type="button" 
-                  (click)="openProjectLink('github')"
-                  class="project-github px-4 md:px-6 py-2 border border-[#38B28B] text-[#38B28B] font-semibold rounded-lg hover:bg-[#38B28B] hover:text-black transition-all duration-300 cursor-pointer text-sm md:text-base">
-                  GitHub
-                </button>
-              </div>
-            </div>
-          </div>
+      <div class="project-info order-2 lg:order-1 relative z-50">
+  <div class="space-y-4 md:space-y-6">
+    <div>
+      <h3 class="text-xs md:text-sm font-bold text-[#38B28B] mb-2">Featured Project</h3>
+      <h2 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4 project-title">{{ currentProject.title }}</h2>
+      <p class="text-sm md:text-base text-gray-400 leading-relaxed mb-4 md:mb-6 project-description">
+        {{ currentProject.description }}
+      </p>
+      
+      <div class="mb-4 md:mb-6">
+        <p class="text-xs md:text-sm font-semibold mb-2 md:mb-3 text-gray-300">Technologies Used:</p>
+        <div class="flex flex-wrap gap-2 project-tech">
+          <span *ngFor="let tech of currentProject.technologies"
+            class="px-2 md:px-3 py-1 rounded-full bg-[#38B28B]/20 text-[#38B28B] text-xs font-semibold">
+            {{ tech }}
+          </span>
         </div>
+      </div>
+
+      <div class="flex gap-3 md:gap-4 mt-4 md:mt-6">
+        <button 
+          type="button" 
+          (click)="openProjectLink('live')"
+          class="project-live relative z-50 px-4 md:px-6 py-2 bg-[#38B28B] text-black font-semibold rounded-lg hover:bg-[#2a9970] transition-colors duration-300 cursor-pointer text-sm md:text-base">
+          View Project
+        </button>
+        <button 
+          type="button" 
+          (click)="openProjectLink('github')"
+          class="project-github relative z-50 px-4 md:px-6 py-2 border border-[#38B28B] text-[#38B28B] font-semibold rounded-lg hover:bg-[#38B28B] hover:text-black transition-all duration-300 cursor-pointer text-sm md:text-base">
+          GitHub
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         <!-- Project Images with Carousel -->
         <div class="project-images order-1 lg:order-2 relative">
