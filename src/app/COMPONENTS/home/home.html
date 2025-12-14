@@ -48,18 +48,37 @@
       </div>
 
       <!-- Image Section -->
-      <div class="relative order-1 lg:order-2 flex justify-center mt-10 sm:mt-0">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-          <div class="w-[330px] h-[330px] rounded-full border-[6px] border-[#38B28B] border-dashed spin-frame"></div>
-        </div>
-        <img src="/IMAGES/HERO_IMG.png" alt="MOAZ ALLAM Portrait" class="w-[260px] h-[260px] object-cover rounded-full relative z-10"/>
-      </div>
+    <div
+  class="relative flex justify-center
+         order-2
+         lg:order-2
+         max-lg:order-1
+         mt-0
+         max-lg:mt-10"
+>
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <div
+      class="w-[330px] h-[330px]
+             rounded-full border-[6px]
+             border-[#38B28B]
+             border-dashed spin-frame"
+    ></div>
+  </div>
+
+  <img
+    src="/IMAGES/HERO_IMG.png"
+    alt="MOAZ ALLAM Portrait"
+    class="w-[260px] h-[260px] rounded-full object-cover relative z-10"
+    loading="eager"
+  />
+</div>
+
 
     </div>
 
   <!-- Stats Cards -->
 <div class="w-full mt-16 sm:mt-24">
-  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-2">
 
     <li class="relative group bg-white/5 backdrop-blur rounded-2xl p-6 text-center
                transition-all duration-500 ease-in-out
