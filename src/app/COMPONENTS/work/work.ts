@@ -36,7 +36,7 @@ export class Work implements OnInit {
       title: 'Recipe Application',
       description: 'A recipe application that allows users filter recipes, view detailed instructions. Built with Angular and TypeScript, featuring a user-friendly interface and responsive design.',
       technologies: ['Angular', 'TypeScript', 'Bootstrap'],
-      mainImage: "https://www.themealdb.com/images/media/meals/kgfh3q1763075438.jpg",
+      mainImage: "/IMAGES/Recipee.jpg",
       liveLink: 'https://moazrecipe.vercel.app/',
       githubLink: 'https://github.com/moazallam1/Recipe'
     },
