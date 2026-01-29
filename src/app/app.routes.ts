@@ -19,11 +19,6 @@ export const routes: Routes = [
         title: 'Work',
     },
     {
-        path: 'testimonials',
-        loadComponent: () => import('./COMPONENTS/testimonials/testimonials').then((m) => m.Testimonials),
-        title: 'Testimonials',
-    },
-    {
         path: 'resume',
         loadComponent: () => import('./COMPONENTS/resume/resume').then((m) => m.RESUME),
         title: 'Resume',

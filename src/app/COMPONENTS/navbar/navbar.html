@@ -1,18 +1,10 @@
-<nav
-  class="bg-[#191A19]/10 backdrop-blur-md fixed w-full z-20 top-0 start-0 border-default"
->
+<nav class="bg-[#191A19]/10 backdrop-blur-md fixed w-full z-20 top-0 start-0 border-default">
   <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
 
     <!-- Logo -->
-    <a
-      routerLink="/home"
-      (click)="closeMenu()"
-      class="flex items-center gap-3 cursor-pointer select-none"
-    >
-      <span
-        class="text-3xl font-extrabold bg-gradient-to-r from-[#38B28B] to-[#c8f443]
-               bg-clip-text text-transparent tracking-wide"
-      >
+    <a routerLink="/home" (click)="closeMenu()" class="flex items-center gap-3 cursor-pointer select-none">
+      <span class="text-3xl font-extrabold bg-gradient-to-r from-[#38B28B] to-[#c8f443]
+               bg-clip-text text-transparent tracking-wide">
         MOAZ<span class="text-[#c8f443]">.</span>
       </span>
     </a>
@@ -21,142 +13,84 @@
     <div class="flex md:order-2 items-center gap-3">
 
       <!-- Hire Me -->
-      <a
-        href="mailto:moazallam133@gmail.com?subject=Project Inquiry&body=Hi Moaz,%0A%0AI'd like to discuss a project with you.%0A%0ADetails:%0A"
+      <a href="mailto:moazallam133@gmail.com?subject=Project Inquiry&body=Hi Moaz,%0A%0AI'd like to discuss a project with you.%0A%0ADetails:%0A"
         class="relative px-6 py-2.5 text-sm font-semibold rounded-xl
                text-[#38B28B] border border-[#38B28B]
                shadow-sm overflow-hidden transition-all duration-300
-               inline-block group"
-      >
-        <span
-          class="relative z-10 group-hover:text-[#191A19]
-                 transition-colors duration-300"
-        >
+               inline-block group">
+        <span class="relative z-10 group-hover:text-[#191A19]
+                 transition-colors duration-300">
           Hire Me
         </span>
-        <span
-          class="absolute inset-0 rounded-xl
+        <span class="absolute inset-0 rounded-xl
                  bg-gradient-to-r from-[#38B28B] to-[#c8f443]
                  opacity-0 group-hover:opacity-100
-                 transition-opacity duration-300"
-        ></span>
+                 transition-opacity duration-300"></span>
       </a>
 
       <!-- Mobile Menu Button -->
-      <button
-        type="button"
-        (click)="toggleMenu()"
-        class="flex items-center justify-center w-10 h-10 rounded-lg
+      <button type="button" (click)="toggleMenu()" class="flex items-center justify-center w-10 h-10 rounded-lg
                text-[#38B28B] md:hidden transition-all duration-300
                hover:bg-[#38B28B]/20 hover:text-[#191A19]
-               focus:ring-2 focus:ring-[#38B28B]"
-      >
+               focus:ring-2 focus:ring-[#38B28B]">
         <span class="sr-only">Open main menu</span>
-        <svg
-          class="w-6 h-6"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-        >
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor">
           <path stroke-linecap="round" d="M5 7h14M5 12h14M5 17h14" />
         </svg>
       </button>
     </div>
 
     <!-- Nav Links -->
-    <div
-      [class.hidden]="!isMenuOpen"
-      class="w-full md:flex md:w-auto md:order-1"
-    >
-      <ul
-        class="flex flex-col p-4 md:p-0 mt-4 font-medium
+    <div [class.hidden]="!isMenuOpen" class="w-full md:flex md:w-auto md:order-1">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium
                border border-[#38B28B] rounded-base bg-[#191A19]
                md:space-x-8 rtl:space-x-reverse
-               md:bg-transparent md:flex-row md:mt-0 md:border-0"
-      >
+               md:bg-transparent md:flex-row md:mt-0 md:border-0">
 
         <!-- Home -->
         <li class="mb-2 md:mb-0">
-          <a
-            routerLink="/home"
-            (click)="closeMenu()"
-            routerLinkActive="active-neon"
-            class="block py-2 px-3 rounded-sm
+          <a routerLink="/home" (click)="closeMenu()" routerLinkActive="active-neon" class="block py-2 px-3 rounded-sm
                    text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]"
-          >
+                   max-md:text-[#191A19] max-md:bg-[#38B28B]">
             Home
           </a>
         </li>
 
         <!-- Services -->
         <li class="mb-2 md:mb-0">
-          <a
-            routerLink="/services"
-            (click)="closeMenu()"
-            routerLinkActive="active-neon"
-            class="block py-2 px-3 rounded-sm
+          <a routerLink="/services" (click)="closeMenu()" routerLinkActive="active-neon" class="block py-2 px-3 rounded-sm
                    text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]"
-          >
+                   max-md:text-[#191A19] max-md:bg-[#38B28B]">
             Services
           </a>
         </li>
 
         <!-- Resume -->
         <li class="mb-2 md:mb-0">
-          <a
-            routerLink="/resume"
-            (click)="closeMenu()"
-            routerLinkActive="active-neon"
-            class="block py-2 px-3 rounded-sm
+          <a routerLink="/resume" (click)="closeMenu()" routerLinkActive="active-neon" class="block py-2 px-3 rounded-sm
                    text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]"
-          >
+                   max-md:text-[#191A19] max-md:bg-[#38B28B]">
             Resume
           </a>
         </li>
 
         <!-- Work -->
         <li class="mb-2 md:mb-0">
-          <a
-            routerLink="/work"
-            (click)="closeMenu()"
-            routerLinkActive="active-neon"
-            class="block py-2 px-3 rounded-sm
+          <a routerLink="/work" (click)="closeMenu()" routerLinkActive="active-neon" class="block py-2 px-3 rounded-sm
                    text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]"
-          >
+                   max-md:text-[#191A19] max-md:bg-[#38B28B]">
             Work
           </a>
         </li>
 
-        <!-- Testimonials -->
-        <li class="mb-2 md:mb-0">
-          <a
-            routerLink="/testimonials"
-            (click)="closeMenu()"
-            routerLinkActive="active-neon"
-            class="block py-2 px-3 rounded-sm
-                   text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]"
-          >
-            Testimonials
-          </a>
-        </li>
+
 
         <!-- Contact -->
         <li>
-          <a
-            routerLink="/contact"
-            (click)="closeMenu()"
-            routerLinkActive="active-neon"
-            class="block py-2 px-3 rounded-sm
+          <a routerLink="/contact" (click)="closeMenu()" routerLinkActive="active-neon" class="block py-2 px-3 rounded-sm
                    text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]"
-          >
+                   max-md:text-[#191A19] max-md:bg-[#38B28B]">
             Contact
           </a>
         </li>
