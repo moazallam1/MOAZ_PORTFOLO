@@ -1,37 +1,63 @@
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Home section - fullscreen with 3D background */
+.home {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.spin-frame {
-    animation: spin 20s linear infinite;
+.home__content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
 }
 
-#home {
-    min-height: auto;
-    padding: 80px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.home__image-wrap {
+  position: relative;
+}
+
+.home__portrait {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(56, 178, 139, 0.2),
+    0 0 60px -10px rgba(56, 178, 139, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home__portrait:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 30px 60px -12px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(56, 178, 139, 0.3),
+    0 0 80px -10px rgba(56, 178, 139, 0.4);
+}
+
+@media (max-width: 640px) {
+  .home__portrait {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 #home ul li {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 #home ul li p {
-    margin: 0;
+  margin: 0;
 }
 
 #home ul li span {
-    display: block;
+  display: block;
 }
-
