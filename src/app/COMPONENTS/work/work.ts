@@ -28,7 +28,7 @@ export class Work implements OnInit {
       description: 'A modern e-commerce platform developed using Angular 19 and TypeScript. Features include product browsing, shopping cart, user authentication, and secure checkout process with full responsive design.',
       technologies: ['Angular 19', 'TypeScript', 'Tailwind CSS'],
       mainImage: '/IMAGES/blog-img-1.jpeg',
-      liveLink: 'https://e-commerce-khaki-ten.vercel.app/',
+      liveLink: 'https://e-commerce-without-loggin-system.vercel.app/#/home',
       githubLink: 'https://github.com/moazallam1/ECommerce'
     },
     {
@@ -48,6 +48,33 @@ export class Work implements OnInit {
       mainImage: '/IMAGES/daniels_.jpg',
       liveLink: 'https://moaz-daniels.netlify.app/',
       githubLink: 'https://github.com/moazallam1/Daniels'
+    },
+    {
+      id: 4,
+      title: 'Marmar Store',
+      description: 'A modern and fully responsive e-commerce platform built with Angular and TypeScript for showcasing shoes, slippers, and socks. Includes category-based product browsing, smooth navigation, mobile-friendly design, and an intuitive shopping experience.',
+      technologies: ["Angular 19", "TypeScript", "Tailwind CSS", "Bootstrap"],
+      mainImage: '/IMAGES/MARMAR.png',
+      liveLink: 'https://marmarstore.vercel.app/',
+      githubLink: ''
+    },
+    {
+      id: 5,
+      title: 'Ampere ',
+      description: 'A modern and fully responsive corporate website built with Angular and TypeScript for an engineering and contracting company. Showcases MEP services, solar energy solutions, renovation projects, smart systems, and safety solutions with a clean professional UI and optimized user experience.',
+      technologies: ["Angular 19", "TypeScript", "Tailwind CSS", "Bootstrap"],
+      mainImage: '/IMAGES/Ampere.png',
+      liveLink: 'https://ampere-website.vercel.app/',
+      githubLink: ''
+    },
+    {
+      id: 6,
+      title: 'Rekaz',
+      description: 'A professional and fully responsive corporate website built with Angular and TypeScript for a digital marketing agency. Showcases branding services, performance marketing, SEO strategies, social media management, and business growth solutions with a modern and clean UI.' ,
+      technologies: ['Angular 19', 'TypeScript', 'Tailwind CSS', 'Bootstrap'],
+      mainImage: '/IMAGES/Rekaz.png',
+      liveLink: 'https://www.rakaznexus.com/',
+      githubLink: ''
     }
   ];
 
