@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CounterService } from '../../SERVICES/counter.service';
+import { SERVICES } from '../services/services';
+import { RESUME } from '../resume/resume';
+import { Work } from '../work/work';
+import { CONTACT } from '../contact/contact';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule, SERVICES, RESUME, Work, CONTACT],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -13,6 +17,7 @@ export class HOME implements OnInit {
   projectsCompleted = 0;
   technologiesMastered = 0;
   codeCommits = 0;
+  showSkills = false;
 
   constructor(private counterService: CounterService) {}
 
@@ -63,5 +68,12 @@ export class HOME implements OnInit {
     };
     const url = links[platform];
     if (url) window.open(url, '_blank');
+  }
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }

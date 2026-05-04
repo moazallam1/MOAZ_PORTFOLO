@@ -2,7 +2,7 @@
   <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
 
     <!-- Logo -->
-    <a routerLink="/home" (click)="closeMenu()" class="flex items-center gap-3 cursor-pointer select-none">
+    <a (click)="scrollToTop()" class="flex items-center gap-3 cursor-pointer select-none">
       <span class="text-3xl font-extrabold bg-gradient-to-r from-[#38B28B] to-[#c8f443]
                bg-clip-text text-transparent tracking-wide">
         MOAZ<span class="text-[#c8f443]">.</span>
@@ -50,7 +50,7 @@
 
         <!-- Home -->
         <li class="mb-2 md:mb-0">
-          <a routerLink="/home" (click)="closeMenu()" routerLinkActive="active-neon" class="block py-2 px-3 rounded-sm
+          <a (click)="scrollToTop()" class="block py-2 px-3 rounded-sm cursor-pointer
                    text-[#38B28B]
                    max-md:text-[#191A19] max-md:bg-[#38B28B]">
             Home
@@ -59,7 +59,7 @@
 
         <!-- Services -->
         <li class="mb-2 md:mb-0">
-          <a routerLink="/services" (click)="closeMenu()" routerLinkActive="active-neon" class="block py-2 px-3 rounded-sm
+          <a (click)="scrollTo('services')" class="block py-2 px-3 rounded-sm cursor-pointer
                    text-[#38B28B]
                    max-md:text-[#191A19] max-md:bg-[#38B28B]">
             Services
@@ -68,7 +68,7 @@
 
         <!-- Resume -->
         <li class="mb-2 md:mb-0">
-          <a routerLink="/resume" (click)="closeMenu()" routerLinkActive="active-neon" class="block py-2 px-3 rounded-sm
+          <a (click)="scrollTo('resume-section')" class="block py-2 px-3 rounded-sm cursor-pointer
                    text-[#38B28B]
                    max-md:text-[#191A19] max-md:bg-[#38B28B]">
             Resume
@@ -77,18 +77,16 @@
 
         <!-- Work -->
         <li class="mb-2 md:mb-0">
-          <a routerLink="/work" (click)="closeMenu()" routerLinkActive="active-neon" class="block py-2 px-3 rounded-sm
+          <a (click)="scrollTo('work-section')" class="block py-2 px-3 rounded-sm cursor-pointer
                    text-[#38B28B]
                    max-md:text-[#191A19] max-md:bg-[#38B28B]">
             Work
           </a>
         </li>
 
-
-
         <!-- Contact -->
         <li>
-          <a routerLink="/contact" (click)="closeMenu()" routerLinkActive="active-neon" class="block py-2 px-3 rounded-sm
+          <a (click)="scrollTo('contact-section')" class="block py-2 px-3 rounded-sm cursor-pointer
                    text-[#38B28B]
                    max-md:text-[#191A19] max-md:bg-[#38B28B]">
             Contact

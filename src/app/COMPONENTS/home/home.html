@@ -69,14 +69,45 @@
           </div>
         </div>
 
-        <!-- Image Section -->
+        <!-- Image Section with Skill Icons Overlay -->
         <div class="home__image-wrap order-1 lg:order-2 flex justify-center mt-10 sm:mt-0">
-          <img
-            src="/IMAGES/HERO_IMG.png"
-            alt="MOAZ ALLAM Portrait"
-            class="home__portrait"
-            loading="eager"
-          />
+          <div class="portrait-container"
+               (mouseenter)="showSkills = true"
+               (mouseleave)="showSkills = false">
+            <img
+              src="/IMAGES/HERO_IMG.png"
+              alt="MOAZ ALLAM Portrait"
+              class="home__portrait"
+              loading="eager"
+            />
+            <!-- Skill Icons Orbit -->
+            <div class="skills-orbit" [class.active]="showSkills">
+              <div class="skill-icon skill-icon--1" title="Angular">
+                <i class="fa-brands fa-angular"></i>
+              </div>
+              <div class="skill-icon skill-icon--2" title="TypeScript">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="skill-icon skill-icon--3" title="HTML5">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <div class="skill-icon skill-icon--4" title="CSS3">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <div class="skill-icon skill-icon--5" title="JavaScript">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <div class="skill-icon skill-icon--6" title="Bootstrap">
+                <i class="fa-brands fa-bootstrap"></i>
+              </div>
+              <div class="skill-icon skill-icon--7" title="Git">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <div class="skill-icon skill-icon--8" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -158,4 +189,32 @@
       </div>
     </div>
   </div>
+
+  <!-- Scroll Down Indicator -->
+  <div class="scroll-indicator" (click)="scrollToSection('services')">
+    <span class="scroll-indicator__text">Scroll Down</span>
+    <div class="scroll-indicator__arrow">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="section-scroll">
+  <app-services></app-services>
+</section>
+
+<!-- Resume Section -->
+<section id="resume-section" class="section-scroll">
+  <app-resume></app-resume>
+</section>
+
+<!-- Work Section -->
+<section id="work-section" class="section-scroll">
+  <app-work></app-work>
+</section>
+
+<!-- Contact Section -->
+<section id="contact-section" class="section-scroll">
+  <app-contact></app-contact>
 </section>
