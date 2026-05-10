@@ -278,32 +278,85 @@
 /* ==========================================
    Responsive
    ========================================== */
-@media (max-width: 640px) {
+
+/* Tablet and below - let content flow naturally */
+@media (max-width: 1023px) {
+  .home {
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    overflow: visible;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .home {
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
+
   .home__portrait {
+    width: 230px;
+    height: 230px;
+  }
+
+  .portrait-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .skills-orbit {
+    width: 300px;
+    height: 300px;
+  }
+
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .skill-icon--1 { margin-left: -20px; }
+  .skill-icon--3 { margin-top: -20px; }
+  .skill-icon--5 { margin-left: -20px; }
+  .skill-icon--7 { margin-top: -20px; }
+}
+
+/* Phones */
+@media (max-width: 640px) {
+  .home {
+    padding-top: 80px;
+    padding-bottom: 24px;
+  }
+
+  .home__portrait {
+    width: 200px;
+    height: 200px;
+  }
+
+  .portrait-container {
     width: 220px;
     height: 220px;
   }
 
-  .portrait-container {
-    width: 240px;
-    height: 240px;
-  }
-
   .skills-orbit {
-    width: 290px;
-    height: 290px;
+    width: 270px;
+    height: 270px;
   }
 
   .skill-icon {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     font-size: 14px;
   }
 
-  .skill-icon--1 { margin-left: -18px; }
-  .skill-icon--3 { margin-top: -18px; }
-  .skill-icon--5 { margin-left: -18px; }
-  .skill-icon--7 { margin-top: -18px; }
+  .skill-icon--1 { margin-left: -17px; }
+  .skill-icon--3 { margin-top: -17px; }
+  .skill-icon--5 { margin-left: -17px; }
+  .skill-icon--7 { margin-top: -17px; }
 }
 
 #home ul li {
