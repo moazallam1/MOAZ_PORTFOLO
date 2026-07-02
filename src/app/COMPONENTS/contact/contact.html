@@ -14,16 +14,16 @@
         <div class="form-row">
           <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" placeholder="Your First Name" formControlName="firstName"
-              [class.error]="isFieldInvalid('firstName')" />
+            <input type="text" id="firstName" placeholder="Your first name" formControlName="firstName"
+              [class.error]="isFieldInvalid('firstName')" autocomplete="given-name" />
             <span class="error-message" *ngIf="isFieldInvalid('firstName')">
               First name is required
             </span>
           </div>
           <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" placeholder="Your Last Name" formControlName="lastName"
-              [class.error]="isFieldInvalid('lastName')" />
+            <input type="text" id="lastName" placeholder="Your last name" formControlName="lastName"
+              [class.error]="isFieldInvalid('lastName')" autocomplete="family-name" />
             <span class="error-message" *ngIf="isFieldInvalid('lastName')">
               Last name is required
             </span>
@@ -33,16 +33,16 @@
         <div class="form-row">
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="Your Email" formControlName="email"
-              [class.error]="isFieldInvalid('email')" />
+            <input type="email" id="email" placeholder="Your email address" formControlName="email"
+              [class.error]="isFieldInvalid('email')" autocomplete="email" />
             <span class="error-message" *ngIf="isFieldInvalid('email')">
               {{ getEmailError() }}
             </span>
           </div>
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" placeholder="+20 1044377059" formControlName="phone"
-              [class.error]="isFieldInvalid('phone')" />
+            <input type="tel" id="phone" placeholder="Your phone number" formControlName="phone"
+              [class.error]="isFieldInvalid('phone')" autocomplete="tel" />
             <span class="error-message" *ngIf="isFieldInvalid('phone')">
               Phone number is required
             </span>
@@ -66,7 +66,7 @@
 
         <div class="form-group full-width">
           <label for="message">Your Message</label>
-          <textarea id="message" placeholder="Tell us about your project..." formControlName="message"
+          <textarea id="message" placeholder="Tell me about your idea, goals, and timeline..." formControlName="message"
             [class.error]="isFieldInvalid('message')" maxlength="500"></textarea>
           <span class="char-count">{{ contactForm.get('message')?.value?.length || 0 }}/500</span>
           <span class="error-message" *ngIf="isFieldInvalid('message')">
