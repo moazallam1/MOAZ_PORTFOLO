@@ -1,11 +1,10 @@
-<nav class="bg-[#191A19]/10 backdrop-blur-md fixed w-full z-20 top-0 start-0 border-default">
-  <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+<nav class="bg-[#111111] fixed w-full z-20 top-0 start-0 shadow-lg">
+  <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto px-6 py-4">
 
     <!-- Logo -->
     <a (click)="scrollToTop()" class="flex items-center gap-3 cursor-pointer select-none">
-      <span class="text-3xl font-extrabold bg-gradient-to-r from-[#38B28B] to-[#c8f443]
-               bg-clip-text text-transparent tracking-wide">
-        MOAZ<span class="text-[#c8f443]">.</span>
+      <span class="text-2xl font-extrabold text-white tracking-wide" style="font-family: 'Space Grotesk', sans-serif;">
+        MOAZ<span class="text-[#FF6B35]">.</span>
       </span>
     </a>
 
@@ -14,26 +13,18 @@
 
       <!-- Hire Me -->
       <a href="mailto:moazallam133@gmail.com?subject=Project Inquiry&body=Hi Moaz,%0A%0AI'd like to discuss a project with you.%0A%0ADetails:%0A"
-        class="relative px-6 py-2.5 text-sm font-semibold rounded-xl
-               text-[#38B28B] border border-[#38B28B]
+        class="relative px-6 py-2 text-sm font-bold rounded-lg
+               bg-[#FF6B35] text-white
                shadow-sm overflow-hidden transition-all duration-300
-               inline-block group">
-        <span class="relative z-10 group-hover:text-[#191A19]
-                 transition-colors duration-300">
-          Hire Me
-        </span>
-        <span class="absolute inset-0 rounded-xl
-                 bg-gradient-to-r from-[#38B28B] to-[#c8f443]
-                 opacity-0 group-hover:opacity-100
-                 transition-opacity duration-300"></span>
+               inline-block hover:bg-[#e05520] hover:shadow-[0_4px_20px_rgba(255,107,53,0.4)]">
+        Hire Me
       </a>
 
       <!-- Mobile Menu Button -->
       <button type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-controls="main-nav"
         aria-label="Toggle navigation menu" class="flex items-center justify-center w-10 h-10 rounded-lg
-               text-[#38B28B] md:hidden transition-all duration-300
-               hover:bg-[#38B28B]/20 hover:text-[#191A19]
-               focus:ring-2 focus:ring-[#38B28B]">
+               text-white md:hidden transition-all duration-300
+               hover:bg-white/10 focus:ring-2 focus:ring-[#FF6B35]">
         <span class="sr-only">Open main menu</span>
         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
           stroke="currentColor">
@@ -45,51 +36,46 @@
     <!-- Nav Links -->
     <div id="main-nav" [class.hidden]="!isMenuOpen" class="w-full md:flex md:w-auto md:order-1">
       <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium
-               border border-[#38B28B] rounded-base bg-[#191A19]
-               md:space-x-8 rtl:space-x-reverse
+               border border-white/10 rounded-xl bg-[#1a1a1a]
+               md:space-x-1 rtl:space-x-reverse
                md:bg-transparent md:flex-row md:mt-0 md:border-0">
 
         <!-- Home -->
-        <li class="mb-2 md:mb-0">
-          <a (click)="scrollToTop()" class="block py-2 px-3 rounded-sm cursor-pointer
-                   text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]">
+        <li class="mb-1 md:mb-0">
+          <a (click)="scrollToTop()" class="block py-2 px-4 rounded-lg cursor-pointer
+                   text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
             Home
           </a>
         </li>
 
         <!-- Services -->
-        <li class="mb-2 md:mb-0">
-          <a (click)="scrollTo('services')" class="block py-2 px-3 rounded-sm cursor-pointer
-                   text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]">
+        <li class="mb-1 md:mb-0">
+          <a (click)="scrollTo('services')" class="block py-2 px-4 rounded-lg cursor-pointer
+                   text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
             Services
           </a>
         </li>
 
         <!-- Resume -->
-        <li class="mb-2 md:mb-0">
-          <a (click)="scrollTo('resume-section')" class="block py-2 px-3 rounded-sm cursor-pointer
-                   text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]">
+        <li class="mb-1 md:mb-0">
+          <a (click)="scrollTo('resume-section')" class="block py-2 px-4 rounded-lg cursor-pointer
+                   text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
             Resume
           </a>
         </li>
 
         <!-- Work -->
-        <li class="mb-2 md:mb-0">
-          <a (click)="scrollTo('work-section')" class="block py-2 px-3 rounded-sm cursor-pointer
-                   text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]">
+        <li class="mb-1 md:mb-0">
+          <a (click)="scrollTo('work-section')" class="block py-2 px-4 rounded-lg cursor-pointer
+                   text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
             Work
           </a>
         </li>
 
         <!-- Contact -->
         <li>
-          <a (click)="scrollTo('contact-section')" class="block py-2 px-3 rounded-sm cursor-pointer
-                   text-[#38B28B]
-                   max-md:text-[#191A19] max-md:bg-[#38B28B]">
+          <a (click)="scrollTo('contact-section')" class="block py-2 px-4 rounded-lg cursor-pointer
+                   text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
             Contact
           </a>
         </li>

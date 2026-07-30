@@ -1,4 +1,4 @@
-/* Home section - fullscreen with 3D background */
+/* Home section */
 .home {
   position: relative;
   height: 100vh;
@@ -11,6 +11,35 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  background: #f4f2ee;
+}
+
+/* Subtle geometric accent — top-right orange slash like the banner */
+.home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(135deg, #FF6B35 0%, transparent 60%);
+  opacity: 0.08;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  pointer-events: none;
+}
+
+/* Bottom-left dark accent */
+.home::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(315deg, #111111 0%, transparent 60%);
+  opacity: 0.06;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  pointer-events: none;
 }
 
 .home__content {
@@ -26,7 +55,7 @@
   position: relative;
 }
 
-/* Portrait Container - needed for hover zone */
+/* Portrait Container */
 .portrait-container {
   position: relative;
   width: 280px;
@@ -42,21 +71,20 @@
   object-fit: cover;
   border-radius: 50%;
   box-shadow:
-    0 25px 50px -12px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(56, 178, 139, 0.2),
-    0 0 60px -10px rgba(56, 178, 139, 0.3);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    0 20px 60px -12px rgba(0, 0, 0, 0.2),
+    0 0 0 4px #ffffff,
+    0 0 0 5px rgba(255,107,53,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
   z-index: 2;
 }
 
 .portrait-container:hover .home__portrait {
-  transform: scale(1.05);
+  transform: scale(1.04);
   box-shadow:
-    0 30px 60px -12px rgba(0, 0, 0, 0.55),
-    0 0 0 2px rgba(56, 178, 139, 0.5),
-    0 0 100px -10px rgba(56, 178, 139, 0.5);
-  filter: brightness(0.85);
+    0 28px 70px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 4px #ffffff,
+    0 0 0 6px rgba(255,107,53,0.5);
 }
 
 /* ==========================================
@@ -73,24 +101,22 @@
   z-index: 3;
 }
 
-/* Individual skill icon */
 .skill-icon {
   position: absolute;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(56, 178, 139, 0.15);
+  background: #ffffff;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(56, 178, 139, 0.4);
+  border: 2px solid rgba(0,0,0,0.10);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: #38B28B;
   opacity: 0;
   transform: scale(0) translate(0, 0);
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 0 20px rgba(56, 178, 139, 0.2);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
 .skills-orbit.active .skill-icon {
@@ -99,98 +125,41 @@
   animation: floatSkill 3s ease-in-out infinite;
 }
 
-/* Position each icon around the circle (8 icons = 45° apart) */
-.skill-icon--1 {
-  top: 0%;
-  left: 50%;
-  margin-left: -22px;
-  transition-delay: 0s;
-  animation-delay: 0s !important;
-}
+.skill-icon--1  { top: 0%; left: 50%; margin-left: -22px; transition-delay: 0s;    animation-delay: 0s !important; }
+.skill-icon--2  { top: 10%; right: 5%;                    transition-delay: 0.06s; animation-delay: 0.4s !important; }
+.skill-icon--3  { top: 45%; right: -5%; margin-top: -22px; transition-delay: 0.12s; animation-delay: 0.8s !important; }
+.skill-icon--4  { bottom: 10%; right: 5%;                  transition-delay: 0.18s; animation-delay: 1.2s !important; }
+.skill-icon--5  { bottom: 0%; left: 50%; margin-left: -22px; transition-delay: 0.24s; animation-delay: 1.6s !important; }
+.skill-icon--6  { bottom: 10%; left: 5%;                   transition-delay: 0.30s; animation-delay: 2.0s !important; }
+.skill-icon--7  { top: 45%; left: -5%; margin-top: -22px;  transition-delay: 0.36s; animation-delay: 2.4s !important; }
+.skill-icon--8  { top: 10%; left: 5%;                      transition-delay: 0.42s; animation-delay: 2.8s !important; }
 
-.skill-icon--2 {
-  top: 10%;
-  right: 5%;
-  transition-delay: 0.06s;
-  animation-delay: 0.4s !important;
-}
-
-.skill-icon--3 {
-  top: 45%;
-  right: -5%;
-  margin-top: -22px;
-  transition-delay: 0.12s;
-  animation-delay: 0.8s !important;
-}
-
-.skill-icon--4 {
-  bottom: 10%;
-  right: 5%;
-  transition-delay: 0.18s;
-  animation-delay: 1.2s !important;
-}
-
-.skill-icon--5 {
-  bottom: 0%;
-  left: 50%;
-  margin-left: -22px;
-  transition-delay: 0.24s;
-  animation-delay: 1.6s !important;
-}
-
-.skill-icon--6 {
-  bottom: 10%;
-  left: 5%;
-  transition-delay: 0.30s;
-  animation-delay: 2.0s !important;
-}
-
-.skill-icon--7 {
-  top: 45%;
-  left: -5%;
-  margin-top: -22px;
-  transition-delay: 0.36s;
-  animation-delay: 2.4s !important;
-}
-
-.skill-icon--8 {
-  top: 10%;
-  left: 5%;
-  transition-delay: 0.42s;
-  animation-delay: 2.8s !important;
-}
-
-/* Floating animation for skill icons */
 @keyframes floatSkill {
-  0%, 100% {
-    transform: scale(1) translateY(0);
-  }
-  50% {
-    transform: scale(1.1) translateY(-6px);
-  }
+  0%, 100% { transform: scale(1) translateY(0); }
+  50%       { transform: scale(1.1) translateY(-6px); }
 }
 
-/* Different colors per skill for variety */
-.skill-icon--1 { color: #DD0031; border-color: rgba(221, 0, 49, 0.5); background: rgba(221, 0, 49, 0.12); } /* Angular */
-.skill-icon--2 { color: #3178C6; border-color: rgba(49, 120, 198, 0.5); background: rgba(49, 120, 198, 0.12); } /* TypeScript */
-.skill-icon--3 { color: #E34F26; border-color: rgba(227, 79, 38, 0.5); background: rgba(227, 79, 38, 0.12); } /* HTML5 */
-.skill-icon--4 { color: #1572B6; border-color: rgba(21, 114, 182, 0.5); background: rgba(21, 114, 182, 0.12); } /* CSS3 */
-.skill-icon--5 { color: #F7DF1E; border-color: rgba(247, 223, 30, 0.5); background: rgba(247, 223, 30, 0.12); } /* JavaScript */
-.skill-icon--6 { color: #7952B3; border-color: rgba(121, 82, 179, 0.5); background: rgba(121, 82, 179, 0.12); } /* Bootstrap */
-.skill-icon--7 { color: #F05032; border-color: rgba(240, 80, 50, 0.5); background: rgba(240, 80, 50, 0.12); } /* Git */
-.skill-icon--8 { color: #fff; border-color: rgba(255, 255, 255, 0.5); background: rgba(255, 255, 255, 0.12); } /* GitHub */
+/* Tech brand colors on white bg — more vivid now */
+.skill-icon--1 { color: #DD0031; border-color: rgba(221,0,49,0.3); }   /* Angular */
+.skill-icon--2 { color: #3178C6; border-color: rgba(49,120,198,0.3); } /* TypeScript */
+.skill-icon--3 { color: #E34F26; border-color: rgba(227,79,38,0.3); }  /* HTML5 */
+.skill-icon--4 { color: #1572B6; border-color: rgba(21,114,182,0.3); } /* CSS3 */
+.skill-icon--5 { color: #F59E0B; border-color: rgba(245,158,11,0.3); } /* JavaScript */
+.skill-icon--6 { color: #7952B3; border-color: rgba(121,82,179,0.3); } /* Bootstrap */
+.skill-icon--7 { color: #F05032; border-color: rgba(240,80,50,0.3); }  /* Git */
+.skill-icon--8 { color: #111111; border-color: rgba(17,17,17,0.3); }   /* GitHub */
 
-/* Glow pulse behind portrait on hover */
+/* Glow ring on hover */
 .portrait-container::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 280px;
-  height: 280px;
+  width: 290px;
+  height: 290px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(56, 178, 139, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 1;
@@ -202,29 +171,17 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.7;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.15);
-    opacity: 1;
-  }
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.7; }
+  50%       { transform: translate(-50%, -50%) scale(1.12); opacity: 1; }
 }
 
-/* ==========================================
-   Section scroll spacing
-   ========================================== */
+/* Section scroll spacing */
 .section-scroll {
   position: relative;
   scroll-margin-top: 80px;
 }
 
-/* ==========================================
-   Responsive
-   ========================================== */
-
-/* Tablet and below - let content flow naturally */
+/* Responsive */
 @media (max-width: 1023px) {
   .home {
     height: auto;
@@ -236,86 +193,30 @@
   }
 }
 
-/* Small tablets / large phones */
 @media (max-width: 768px) {
-  .home {
-    padding-top: 90px;
-    padding-bottom: 30px;
-  }
-
-  .home__portrait {
-    width: 230px;
-    height: 230px;
-  }
-
-  .portrait-container {
-    width: 250px;
-    height: 250px;
-  }
-
-  .skills-orbit {
-    width: 300px;
-    height: 300px;
-  }
-
-  .skill-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }
-
+  .home { padding-top: 90px; padding-bottom: 30px; }
+  .home__portrait   { width: 230px; height: 230px; }
+  .portrait-container { width: 250px; height: 250px; }
+  .skills-orbit     { width: 300px; height: 300px; }
+  .skill-icon       { width: 40px; height: 40px; font-size: 16px; }
   .skill-icon--1 { margin-left: -20px; }
   .skill-icon--3 { margin-top: -20px; }
   .skill-icon--5 { margin-left: -20px; }
   .skill-icon--7 { margin-top: -20px; }
 }
 
-/* Phones */
 @media (max-width: 640px) {
-  .home {
-    padding-top: 80px;
-    padding-bottom: 24px;
-  }
-
-  .home__portrait {
-    width: 200px;
-    height: 200px;
-  }
-
-  .portrait-container {
-    width: 220px;
-    height: 220px;
-  }
-
-  .skills-orbit {
-    width: 270px;
-    height: 270px;
-  }
-
-  .skill-icon {
-    width: 34px;
-    height: 34px;
-    font-size: 14px;
-  }
-
+  .home { padding-top: 80px; padding-bottom: 24px; }
+  .home__portrait   { width: 200px; height: 200px; }
+  .portrait-container { width: 220px; height: 220px; }
+  .skills-orbit     { width: 270px; height: 270px; }
+  .skill-icon       { width: 34px; height: 34px; font-size: 14px; }
   .skill-icon--1 { margin-left: -17px; }
   .skill-icon--3 { margin-top: -17px; }
   .skill-icon--5 { margin-left: -17px; }
   .skill-icon--7 { margin-top: -17px; }
 }
 
-#home ul li {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-#home ul li p {
-  margin: 0;
-}
-
-#home ul li span {
-  display: block;
-}
+#home ul li { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+#home ul li p    { margin: 0; }
+#home ul li span { display: block; }

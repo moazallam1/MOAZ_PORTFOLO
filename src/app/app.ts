@@ -3,11 +3,10 @@ import { Title, Meta } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 import { NAVBAR } from "./COMPONENTS/navbar/navbar";
-import { SpaceBackgroundComponent } from "./COMPONENTS/space-background/space-background.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NAVBAR, SpaceBackgroundComponent],
+  imports: [RouterOutlet, NAVBAR],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

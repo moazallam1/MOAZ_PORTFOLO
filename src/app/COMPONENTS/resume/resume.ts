@@ -35,10 +35,10 @@ export class RESUME implements OnInit {
 
         // Add active class to clicked button and apply styles
         button.classList.add('active');
-        button.style.background = '#38B28B';
-        button.style.color = '#000';
-        button.style.boxShadow = '0 0 20px rgba(56, 178, 139, 0.4)';
-        button.style.borderColor = '#38B28B';
+        button.style.background = '#FF6B35';
+        button.style.color = '#ffffff';
+        button.style.boxShadow = '0 4px 16px rgba(255, 107, 53, 0.35)';
+        button.style.borderColor = '#FF6B35';
 
         // Show corresponding content
         const activeContent = document.querySelector(`[data-content="${tabName}"]`) as HTMLElement;

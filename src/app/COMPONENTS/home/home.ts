@@ -14,8 +14,8 @@ import { CONTACT } from '../contact/contact';
 })
 export class HOME implements OnInit {
   yearsExp = 0;
+  happyClients = 0;
   projectsCompleted = 0;
-  technologiesMastered = 0;
   codeCommits = 0;
   showSkills = false;
 
@@ -35,24 +35,24 @@ export class HOME implements OnInit {
         duration: 200,
       },
       {
-        getter: () => this.projectsCompleted,
-        setter: (value) => (this.projectsCompleted = value),
-        target: 15,
+        getter: () => this.happyClients,
+        setter: (value) => (this.happyClients = value),
+        target: 4,
         increment: 1,
-        duration: 150,
+        duration: 200,
       },
       {
-        getter: () => this.technologiesMastered,
-        setter: (value) => (this.technologiesMastered = value),
-        target: 8,
+        getter: () => this.projectsCompleted,
+        setter: (value) => (this.projectsCompleted = value),
+        target: 6,
         increment: 1,
-        duration: 150,
+        duration: 180,
       },
       {
         getter: () => this.codeCommits,
         setter: (value) => (this.codeCommits = value),
-        target: 500,
-        increment: 10,
+        target: 200,
+        increment: 5,
         duration: 20,
       },
     ]);

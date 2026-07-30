@@ -1,68 +1,53 @@
 #resume {
-  background: linear-gradient(135deg, rgba(56, 178, 139, 0.05) 0%, rgba(200, 244, 67, 0.02) 100%);
+  background: #f4f2ee;
 }
 
 /* Resume Navigation Buttons */
 .resume-nav-btn {
   position: relative;
   overflow: hidden;
-  font-size: 14px;
+  font-size: 13px;
   border: 2px solid transparent;
   background: transparent;
-  color: #fff;
+  color: #555;
   transition: all 0.3s ease;
 }
 
-.resume-nav-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(56, 178, 139, 0.2);
-  transition: left 0.3s ease;
-  z-index: -1;
-}
-
-.resume-nav-btn:hover::before {
-  left: 100%;
-}
-
 .resume-nav-btn:hover {
-  background: rgba(56, 178, 139, 0.1);
-  border-color: #38B28B;
+  background: rgba(255, 107, 53, 0.08);
+  border-color: rgba(255, 107, 53, 0.3);
+  color: #FF6B35;
 }
 
 .resume-nav-btn.active {
-  background: #38B28B !important;
-  color: #000 !important;
-  border-color: #38B28B !important;
-  box-shadow: 0 0 20px rgba(56, 178, 139, 0.4);
+  background: #FF6B35 !important;
+  color: #fff !important;
+  border-color: #FF6B35 !important;
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.35);
 }
 
-/* Resume Content */
+/* Resume Content Scrollable */
 .resume-content-container {
   scrollbar-width: thin;
-  scrollbar-color: #38B28B rgba(56, 178, 139, 0.1);
+  scrollbar-color: #FF6B35 rgba(0,0,0,0.06);
 }
 
 .resume-content-container::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 .resume-content-container::-webkit-scrollbar-track {
-  background: rgba(56, 178, 139, 0.1);
+  background: rgba(0,0,0,0.04);
   border-radius: 10px;
 }
 
 .resume-content-container::-webkit-scrollbar-thumb {
-  background: #38B28B;
+  background: #FF6B35;
   border-radius: 10px;
 }
 
 .resume-content-container::-webkit-scrollbar-thumb:hover {
-  background: #2a9970;
+  background: #e05520;
 }
 
 .resume-content {
@@ -74,31 +59,20 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Progress Bar Animation */
 .progress-bar {
   transition: width 0.05s linear;
-  background: linear-gradient(90deg, #38B28B 0%, #2a9970 100%);
+  background: linear-gradient(90deg, #FF6B35 0%, #FF9A5C 100%);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  .resume-nav-btn {
-    font-size: 14px;
-  }
-
-  #resume {
-    padding: 40px 0;
-  }
+  .resume-nav-btn { font-size: 12px; }
+  #resume { padding: 40px 0; }
 }
 
 #resume .border-l-2 {
@@ -108,9 +82,9 @@
 
 #resume .border-l-2:hover {
   padding-left: 1.75rem;
-  border-color: #38B28B;
+  border-color: #FF6B35;
 }
 
 #resume .border-l-2:hover h4 {
-  color: #38B28B;
+  color: #FF6B35;
 }

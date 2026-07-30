@@ -1,9 +1,30 @@
+/* Google Fonts — Inter + Space Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
+
+/* ==========================================
+   Design Tokens — Light Theme (Banner-Inspired)
+   ========================================== */
+:root {
+  --bg-primary:    #f4f2ee;   /* warm off-white — banner main bg */
+  --bg-white:      #ffffff;
+  --bg-dark:       #111111;   /* near-black sections */
+  --bg-card:       #ffffff;
+  --text-primary:  #111111;
+  --text-secondary:#555555;
+  --text-muted:    #888888;
+  --accent:        #FF6B35;
+  --accent-hover:  #e05520;
+  --accent-light:  rgba(255,107,53,0.10);
+  --border:        rgba(0,0,0,0.08);
+  --border-dark:   rgba(0,0,0,0.14);
+}
 
 * {
   margin: 0;
@@ -20,57 +41,47 @@ html, body {
 }
 
 body {
-  background: #0a0a0a;
-  color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: relative;
   overflow: hidden;
 }
 
 ::selection {
-  background: #38B28B;
+  background: var(--accent);
   color: #fff;
 }
 
+/* Remove old body glow blobs */
 body::before,
 body::after {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  filter: blur(180px);
-  opacity: 0.45;
+  content: none;
 }
 
-body::before {
-  background: #38B28B;
-  top: -150px;
-  left: -100px;
+/* Remove any overflow issues from main layout */
+#root, app-root {
+  width: 100%;
+  height: auto;
+  overflow: visible;
 }
 
-body::after {
-  background: #38B28B;
-  bottom: -150px;
-  right: -100px;
-}
-
+/* ==========================================
+   Active Nav Link
+   ========================================== */
 .active-neon {
-  background-image: linear-gradient(to right, #38B28B, #c8f443);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent);
   position: relative;
   font-weight: 600;
-  background-color: rgba(0, 0, 0, 0.3); 
-  border: 2px solid rgba(56, 178, 139, 0.6); 
+  border: 2px solid rgba(255,107,53,0.5);
   border-radius: 6px;
-  padding: 0.5rem 1rem; 
+  padding: 0.5rem 1rem;
 }
 
 @media (min-width: 768px) {
   .active-neon {
-    background-color: transparent; 
-    border: none; 
+    border: none;
+    color: var(--accent);
   }
 
   .active-neon::after {
@@ -81,54 +92,49 @@ body::after {
     bottom: -2px;
     width: 80%;
     height: 3px;
-    background: linear-gradient(to right, #38B28B, #c8f443);
+    background: var(--accent);
     border-radius: 4px;
   }
 }
 
-/* Remove any overflow issues from main layout */
-#root, app-root {
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-/* Custom Scrollbar Styling */
-/* For Chrome, Safari, and Edge */
+/* ==========================================
+   Custom Scrollbar
+   ========================================== */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #e8e6e2;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #38B28B 0%, #2a9970 100%);
+  background: linear-gradient(180deg, #FF6B35 0%, #e05520 100%);
   border-radius: 10px;
-  border: 3px solid #1a1a1a;
+  border: 2px solid #e8e6e2;
   transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #2a9970 0%, #1e7558 100%);
-  box-shadow: 0 0 15px rgba(56, 178, 139, 0.4);
+  background: #e05520;
+  box-shadow: 0 0 8px rgba(255,107,53,0.3);
 }
 
-/* Firefox */
 * {
-  scrollbar-color: #38B28B #1a1a1a;
+  scrollbar-color: #FF6B35 #e8e6e2;
   scrollbar-width: thin;
 }
 
-/* Optional: Add glow effect on scroll */
-::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(180deg, #1e7558 0%, #38B28B 100%);
-  box-shadow: 0 0 20px rgba(56, 178, 139, 0.6);
+/* ==========================================
+   Utility: Dark Section (work section etc.)
+   ========================================== */
+.section-dark {
+  background: var(--bg-dark);
+  color: #fff;
 }
 
-
-
-
-
+.section-light {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}

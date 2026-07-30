@@ -1,134 +1,6 @@
-.work-section {
-  padding: 80px 20px;
-  background: #1a1a1a;
-}
-
-.work-container {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.work-content {
-  flex: 1;
-  color: #fff;
-}
-
-.project-number {
-  font-size: 80px;
-  font-weight: bold;
-  color: #333;
-  display: block;
-  line-height: 1;
-  margin-bottom: 10px;
-  font-family: 'Courier New', monospace;
-}
-
-.project-title {
-  font-size: 48px;
-  font-weight: bold;
-  margin: 20px 0;
-  color: #fff;
-}
-
-.project-description {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #bbb;
-  margin-bottom: 30px;
-}
-
-.tech-stack {
-  font-size: 16px;
-  color: #1abc9c;
-  margin-bottom: 30px;
-  font-weight: 500;
-}
-
-.project-links {
-  display: flex;
-  gap: 20px;
-}
-
-.icon-link {
-  width: 50px;
-  height: 50px;
-  border: 2px solid #444;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.icon-link:hover {
-  border-color: #1abc9c;
-  color: #1abc9c;
-  background: rgba(26, 188, 156, 0.1);
-}
-
-.icon-link svg {
-  width: 24px;
-  height: 24px;
-}
-
-.work-image {
-  flex: 1;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.work-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-}
-
-.carousel-controls {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.carousel-btn {
-  width: 40px;
-  height: 40px;
-  background: #1abc9c;
-  border: none;
-  border-radius: 50%;
-  color: #000;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
-
-.carousel-btn:hover {
-  transform: scale(1.1);
-}
-
 #work {
-  background: linear-gradient(135deg, rgba(56, 178, 139, 0.05) 0%, rgba(200, 244, 67, 0.02) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin-top: 2rem;
-}
-
-#work .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  background: #f4f2ee;
+  min-height: auto;
 }
 
 .project-info {
@@ -140,44 +12,13 @@
 }
 
 @keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-#work h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-#work .project-number {
-  color: #38B28B;
-  font-weight: bold;
-}
-
-#work button {
-  transition: all 0.3s ease;
-}
-
-#work button:active {
-  transform: scale(0.95);
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 #work img {
@@ -190,12 +31,6 @@
   transform: scale(1.02);
 }
 
-#work .bg-gradient-to-b {
-  box-shadow: 0 0 30px rgba(56, 178, 139, 0.3);
-  border-radius: 12px;
-}
-
-/* Carousel buttons - visible and functional on all screen sizes */
 button[aria-label="Previous project"],
 button[aria-label="Next project"] {
   min-width: 40px;
@@ -206,122 +41,24 @@ button[aria-label="Next project"] {
   pointer-events: auto !important;
 }
 
-/* Mobile First - Extra small screens (xs, default) */
 @media (max-width: 640px) {
-  #work {
-    min-height: auto;
-    padding: 40px 0 20px 0;
-    margin-top: 2rem;
-  }
-
-  #work .container {
-    width: 90%;
-  }
-
-  .project-info {
-    margin-top: 20px;
-  }
-
-  #work h2 {
-    font-size: 1.5rem;
-  }
-
-  #work p {
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
+  #work { padding: 40px 0 20px 0; }
+  #work .container { width: 90%; }
+  .project-info { margin-top: 20px; }
 
   button[aria-label="Previous project"],
   button[aria-label="Next project"] {
     width: 40px !important;
     height: 40px !important;
-    min-width: 40px;
-    min-height: 40px;
-  }
-
-  button[aria-label="Previous project"] svg,
-  button[aria-label="Next project"] svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .project-tech span {
-    font-size: 0.65rem;
-    padding: 0.25rem 0.5rem;
-  }
-
-  .project-live,
-  .project-github {
-    font-size: 0.875rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .project-images {
-    margin-top: 10px;
   }
 }
 
-/* Small screens (sm: 640px) */
 @media (min-width: 641px) and (max-width: 768px) {
-  #work {
-    min-height: auto;
-    padding: 50px 0 30px 0;
-    margin-top: 2.5rem;
-  }
-
-  #work .container {
-    width: 85%;
-  }
-
-  #work h2 {
-    font-size: 2rem;
-  }
-
-  button[aria-label="Previous project"],
-  button[aria-label="Next project"] {
-    width: 44px !important;
-    height: 44px !important;
-  }
-
-  button[aria-label="Previous project"] svg,
-  button[aria-label="Next project"] svg {
-    width: 18px;
-    height: 18px;
-  }
+  #work { padding: 50px 0 30px 0; }
+  #work .container { width: 85%; }
 }
 
-/* Tablet and up (md: 768px) */
-@media (min-width: 769px) {
-  button[aria-label="Previous project"],
-  button[aria-label="Next project"] {
-    width: 48px !important;
-    height: 48px !important;
-  }
-
-  button[aria-label="Previous project"] svg,
-  button[aria-label="Next project"] svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Large screens (lg: 1024px) */
 @media (min-width: 1024px) {
-  #work {
-    min-height: 100vh;
-    padding: 0;
-    margin-top: 3rem;
-  }
-
-  #work .container {
-    width: 80%;
-  }
-
-  #work h2 {
-    font-size: 2.5rem;
-  }
-
-  #work .project-images:hover img {
-    transform: scale(1.02);
-  }
+  #work { padding: 80px 0; }
+  #work .container { width: 80%; }
 }
