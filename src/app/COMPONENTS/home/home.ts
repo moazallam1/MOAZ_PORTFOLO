@@ -5,10 +5,11 @@ import { SERVICES } from '../services/services';
 import { RESUME } from '../resume/resume';
 import { Work } from '../work/work';
 import { CONTACT } from '../contact/contact';
+import { DETAILS } from '../details/details';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, SERVICES, RESUME, Work, CONTACT],
+  imports: [CommonModule, SERVICES, RESUME, Work, CONTACT, DETAILS],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

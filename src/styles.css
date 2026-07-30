@@ -138,3 +138,8 @@ body::after {
   background: var(--bg-primary);
   color: var(--text-primary);
 }
+
+/* Active navbar link */
+.active-neon {
+  color: #ffffff !important;
+}

@@ -1,8 +1,8 @@
 .contact-wrapper {
   width: 100%;
-  padding: 80px 20px;
+  padding: 120px 20px 80px;
   background: #f4f2ee;
-  min-height: auto;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

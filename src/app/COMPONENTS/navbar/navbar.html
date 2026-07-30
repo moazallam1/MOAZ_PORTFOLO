@@ -1,86 +1,81 @@
-<nav class="bg-[#111111]/95 backdrop-blur-md fixed w-full z-[9999] top-0 start-0 shadow-lg border-b border-white/5">
-  <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto px-6 py-4">
-
-    <!-- Logo -->
-    <a (click)="scrollToTop()" class="flex items-center gap-3 cursor-pointer select-none">
-      <span class="text-2xl font-extrabold text-white tracking-wide" style="font-family: 'Space Grotesk', sans-serif;">
-        MOAZ<span class="text-[#FF6B35]">.</span>
-      </span>
-    </a>
-
-    <!-- Right Section -->
-    <div class="flex md:order-2 items-center gap-3">
-
-      <!-- Hire Me -->
-      <a href="mailto:moazallam133@gmail.com?subject=Project Inquiry&body=Hi Moaz,%0A%0AI'd like to discuss a project with you.%0A%0ADetails:%0A"
-        class="relative px-6 py-2 text-sm font-bold rounded-lg
-               bg-[#FF6B35] text-white
-               shadow-sm overflow-hidden transition-all duration-300
-               inline-block hover:bg-[#e05520] hover:shadow-[0_4px_20px_rgba(255,107,53,0.4)]">
-        Hire Me
+bgtext-white bg-white/10<!-- Nav Links -->
+<div id="main-nav" [class.hidden]="!isMenuOpen" class="w-full md:flex md:w-auto md:order-1">
+  <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium
+           border border-white/10 rounded-xl bg-[#1a1a1a]
+           md:space-x-1 rtl:space-x-reverse
+           md:bg-transparent md:flex-row md:mt-0 md:border-0">
+    <li class="mb-1 md:mb-0">
+      <a routerLink="/home" routerLinkActive="text-white bg-white/10" [routerLinkActiveOptions]="{ exact: true }"
+        class="block py-2 px-4 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
+        Home
       </a>
+    </li>
 
-      <!-- Mobile Menu Button -->
-      <button type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-controls="main-nav"
-        aria-label="Toggle navigation menu" class="flex items-center justify-center w-10 h-10 rounded-lg
-               text-white md:hidden transition-all duration-300
-               hover:bg-white/10 focus:ring-2 focus:ring-[#FF6B35]">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-          stroke="currentColor">
-          <path stroke-linecap="round" d="M5 7h14M5 12h14M5 17h14" />
-        </svg>
-      </button>
-    </div>
+    <li class="mb-1 md:mb-0">
+      <a routerLink="/about" routerLinkActive="text-white bg-white/10" [routerLinkActiveOptions]="{ exact: true }"
+        class="block py-2 px-4 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
+        About
+      </a>
+    </li>
 
-    <!-- Nav Links -->
-    <div id="main-nav" [class.hidden]="!isMenuOpen" class="w-full md:flex md:w-auto md:order-1">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium
+    <li class="mb-1 md:mb-0">
+      <a routerLink="/work" routerLinkActive="text-white bg-white/10" [routerLinkActiveOptions]="{ exact: true }"
+        class="block py-2 px-4 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
+        Work
+      </a>
+    </li>
+
+    <li class="mb-1 md:mb-0">
+      <a routerLink="/services" routerLinkActive="text-white bg-white/10" [routerLinkActiveOptions]="{ exact: true }"
+        class="block py-2 px-4 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
+        <!-- Nav Links -->
+        <div id="main-nav" [class.hidden]="!isMenuOpen" class="w-full md:flex md:w-auto md:order-1">
+          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium
                border border-white/10 rounded-xl bg-[#1a1a1a]
                md:space-x-1 rtl:space-x-reverse
                md:bg-transparent md:flex-row md:mt-0 md:border-0">
 
-        <!-- Home -->
-        <li class="mb-1 md:mb-0">
-          <a (click)="scrollToTop()" class="block py-2 px-4 rounded-lg cursor-pointer
-                   text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
-            Home
-          </a>
-        </li>
+            <li class="mb-1 md:mb-0">
+              <a routerLink="/home" routerLinkActive="text-white bg-white/10"
+                class="block py-2 px-4 rounded-lg text-white/60 hover:text-white hover:bg-white/10 text-sm font-medium">
+                Home
+              </a>
+            </li>
 
-        <!-- Services -->
-        <li class="mb-1 md:mb-0">
-          <a (click)="scrollTo('services')" class="block py-2 px-4 rounded-lg cursor-pointer
-                   text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
-            Services
-          </a>
-        </li>
+            <li class="mb-1 md:mb-0">
+              <a routerLink="/about" routerLinkActive=""
+                class="block py-2 px-4 rounded-lg text-white/60 hover:text-white hover:bg-white/10 text-sm font-medium">
+                About
+              </a>
+            </li>
 
-        <!-- Resume -->
-        <li class="mb-1 md:mb-0">
-          <a (click)="scrollTo('resume-section')" class="block py-2 px-4 rounded-lg cursor-pointer
-                   text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
-            Resume
-          </a>
-        </li>
+            <li class="mb-1 md:mb-0">
+              <a routerLink="/work" routerLinkActive=""
+                class="block py-2 px-4 rounded-lg text-white/60 hover:text-white hover:bg-white/10 text-sm font-medium">
+                Work
+              </a>
+            </li>
 
-        <!-- Work -->
-        <li class="mb-1 md:mb-0">
-          <a (click)="scrollTo('work-section')" class="block py-2 px-4 rounded-lg cursor-pointer
-                   text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
-            Work
-          </a>
-        </li>
+            <li class="mb-1 md:mb-0">
+              <a routerLink="/services" routerLinkActive=""
+                class="block py-2 px-4 rounded-lg text-white/60 hover:text-white hover:bg-white/10 text-sm font-medium">
+                Services
+              </a>
+            </li>
 
-        <!-- Contact -->
-        <li>
-          <a (click)="scrollTo('contact-section')" class="block py-2 px-4 rounded-lg cursor-pointer
-                   text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
-            Contact
-          </a>
-        </li>
+            <li class="mb-1 md:mb-0">
+              <a routerLink="/resume" routerLinkActive=""
+                class="block py-2 px-4 rounded-lg text-white/60 hover:text-white hover:bg-white/10 text-sm font-medium">
+                Resume
+              </a>
+            </li>
 
-      </ul>
-    </div>
-  </div>
-</nav>
+            <li>
+              <a routerLink="/contact" routerLinkActive=""
+                class="block py-2 px-4 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+        </div>
