@@ -6,9 +6,3 @@ button:hover span.absolute {
 button:hover span.relative {
   color: white;
 }
-
-/* Active nav link */
-:host ::ng-deep .active-neon {
-  color: #FF6B35 !important;
-  background: rgba(255, 107, 53, 0.08) !important;
-}
